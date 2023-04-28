@@ -1,0 +1,23 @@
+header {
+    text-align: center;
+    background-color: rgb(37, 33, 33);
+}
+
+
+.label {
+    font-size: 200px; 
+    color: white;
+}
+
+
+svg {
+    max-width: 3800px;
+    max-height: 3500px;
+    min-width: 1000px;
+    min-height: 800px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
