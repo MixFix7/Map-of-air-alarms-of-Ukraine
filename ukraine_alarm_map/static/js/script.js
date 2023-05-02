@@ -36,6 +36,22 @@ function updateBar() {
 startTime = Date.now();
 requestAnimationFrame(updateBar);
 
+var countdownNum = document.getElementById("countdown")
+
+var countdown = setInterval(function() {
+    var count = parseInt(countdownNum.textContent);
+
+    count--;
+
+    countdownNum.textContent = count;
+
+    if (count == 0) {
+        clearInterval(countdown)
+    }
+    
+}, 1000)
+
+
 // кнопка перезагрузки
 const button = document.querySelector('refresh');
 

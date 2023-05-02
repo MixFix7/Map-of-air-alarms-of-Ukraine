@@ -24,7 +24,7 @@ header {
 
 #timer {
     width: 100%;
-    height: 7px;
+    height: 10px;
     background-color: rgb(44, 44, 44);
     position: fixed;
     top: 0;
@@ -33,8 +33,13 @@ header {
 
 #timer .bar {
     height: 100%;
-    background-color: rgb(44, 32, 151);
+    background-color: rgb(32, 151, 38);
     transition: width 1s linear;
+}
+
+.seconds {
+  font-size: 20px;
+  color: grey;
 }
 
 .refresh {
@@ -101,7 +106,7 @@ text {
 
 .loader {
   position: fixed;
-    top: 35%;
+    top: 40%;
     left: 45%;
     --cell-size: 3vw;
     --cell-spacing: 1px;

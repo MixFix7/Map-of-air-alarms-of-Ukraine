@@ -10,7 +10,7 @@
 {% block content %}
 
 <header>
-    <h1 class="label">Карта тривог України <button class="refresh" id="refresh" onclick="refresh_page()"><img src="{% static 'images/refresh.png' %}" alt="refresh"></button></h1>
+    <h1 class="label">Карта тривог України <button class="refresh" id="refresh" onclick="refresh_page()"><img src="{% static 'images/refresh.png' %}" alt="refresh"></button> <span class="seconds"> До оновлення карти <span id="countdown" class="seconds">15</span></span></h1>
     <div id="timer"></div>
 </header>
 
