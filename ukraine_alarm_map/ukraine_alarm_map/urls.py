@@ -20,5 +20,5 @@ from ukraine_map.views import *
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', home, name="Home")
+    path('', Map.as_view(), name="Home")
 ]
