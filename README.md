@@ -69,5 +69,5 @@ Open your web browser and go to `http://localhost:8000` to view the map of air a
 
 ## License
 
-The Map-of-air-alarms-of-Ukraine project is open source and released under the [MIT License](LICENSE).
+The Map-of-air-alarms-of-Ukraine project is open source and released under the [Apache-2.0 license](LICENSE).
 
