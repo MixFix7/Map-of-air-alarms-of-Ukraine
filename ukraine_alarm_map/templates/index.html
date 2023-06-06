@@ -6,18 +6,26 @@
 
 {% block title %} Air alerts Ukraine map {% endblock %}
 
-{% block js %} <script src="{% static 'js/script.js' %}"></script> {% endblock %}
+{% block js %} <script defer src="{% static 'js/script.js' %}"></script> {% endblock %}
 
 {% block content %}
+
 
 <header>
     <h1 class="label">Карта тривог України <button class="refresh" id="refresh" onclick="refresh_page()"><img src="{% static 'images/refresh.png' %}" alt="refresh"></button> <span class="seconds"> До оновлення карти <span id="countdown" class="seconds">15</span></span></h1>
     <div id="timer"></div>
+    <div id="responce">
+        <form id="outForm">
+            {% csrf_token %}
+            <input type="text" name="ourForm_input">
+            <button>send</button name="outForm_button">
+        </form>
+        <div id="messageDocument"></div>
+    </div>
 </header>
-
+    
 <!--Скріпти ебані-->
-<script src="{% static 'js/script.js' %}"></script>
-
+    <script src="{% static 'ajax/update-status-alarms.js' %}"></script>
 <!--SVG паганий-->
 <svg viewBox = "0 0 600 400" id="my-element">
 	<defs>

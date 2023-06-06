@@ -1,12 +1,11 @@
-document.addEventListener('DOMContentLoaded', function() {
-    const load_animation = document.getElementById('loader');
-    setTimeout(function() {
+ const load_animation = document.getElementById('loader');
+   setTimeout(function() {
         location.reload();
         load_animation.classList.add('loader');
         document.body.classList.add('blur');
         animate();
     }, 15000);
-  });
+
   
 
 // повзунок перезагрузки
