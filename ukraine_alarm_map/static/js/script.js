@@ -1,10 +1,10 @@
- const load_animation = document.getElementById('loader');
-   setTimeout(function() {
-        location.reload();
-        load_animation.classList.add('loader');
-        document.body.classList.add('blur');
-        animate();
-    }, 15000);
+// const load_animation = document.getElementById('loader');
+// setTimeout(function() {
+//      location.reload();
+//      load_animation.classList.add('loader');
+//      document.body.classList.add('blur');
+//      animate();
+//  }, 15000);
 
   
 

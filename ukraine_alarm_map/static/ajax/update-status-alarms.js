@@ -1,26 +1,25 @@
-var form = document.getElementById('outForm');
+// var xhr = new XMLHttpRequest();
 
-form.addEventListener('submit', function(event) {
-    event.preventDefault();
+// xhr.open('GET', '', true);
 
-    var formData = new FormData(form);
+// xhr.onload = function() {
+//     if (xhr.status >= 200 && xhr.status <= 400) {
+//         // Success server answer processing
+//         var responce = JSON.parse(xhr.responseText);     
+//         console.log(responce.data);
+//     } else {
+//         console.error(xhr.statusText)
+//     }
+// };
 
-    var xhr = new XMLHttpRequest();
-    xhr.open('POST', '', true);
+// xhr.onerror = function() {
+//     console.error("Error response");
+// };
 
-    xhr.onload = function() {
-        if (xhr.status >= 200 && xhr.status < 400) {
-            var responce = JSON.parse(xhr.responseText);
-            var messageElement = document.getElementById('messageDocument');
-            messageElement.textContent = responce.message;
-        } else {
-            console.error(xhr.statusText);
-        }
-    };
+// setTimeout(function() {
+//     xhr.send();
+// }, 15000); 
 
-    xhr.onerror = function() {
-        console.error('Error responce')
-    };
 
-    xhr.send(formData);
-});
+
+
