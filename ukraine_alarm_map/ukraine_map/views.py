@@ -4,12 +4,9 @@ from django.views.generic import View, TemplateView
 from django.http import JsonResponse
 
 
-class Map(View):
-    def get(self, request):
+def map(request):
+    if request.method == 'GET':
         all_alarms = get_alarms()
-
-
-
-
-        return JsonResponse({'data': all_alarms})
+        return JsonResponse({'all_alarms': all_alarms})
+    return render(request, 'index.html')
 
