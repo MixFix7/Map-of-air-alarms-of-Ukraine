@@ -22,6 +22,7 @@ function get_alarms() {
             // Success server answer processing
             var data = JSON.parse(xhr.responseText);     
             console.log(data.all_alarms)
+            return data.all_alarms
             
             
             // var alarms = data.all_alarms;
@@ -47,7 +48,23 @@ get_alarms();
 
 setInterval(get_alarms, 15000);
 
+var alarm = get_alarms();
 
+var g = document.getElementById('g');
 
+var pathElements = g.getElementsByTagName('path')
+
+Array.from(pathElements).forEach(function(path) {
+    var id = path.getAttribute('id');
+    var title = path.getAttribute('title');
+
+    if (alarm["Запорізька"] === '🟢') {
+        path.style.fill = 'red'
+      } else if (alarm.Запорізька === '🔴') {
+        path.style.fill = 'green'
+
+    }
+
+})
 
 
