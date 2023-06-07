@@ -43,10 +43,10 @@ function get_alarms() {
 
 };
 
-get_alarms()
+get_alarms();
 
+setInterval(get_alarms, 15000);
 
-setInterval(get_alarms(), 15000);
 
 
 
