@@ -2,6 +2,7 @@ from django.shortcuts import render
 from .parser import get_alarms
 from django.views.generic import View, TemplateView
 from django.http import JsonResponse, HttpRequest
+from django.template import loader
 
 
 class Map(TemplateView):
@@ -17,8 +18,7 @@ class Map(TemplateView):
 class Alarms(View):
     def get(self, request):
         all_alarms = get_alarms()
-        print(all_alarms)
-        return JsonResponse({'all_alarms': all_alarms})
+        return render(request, )
 
 
 
