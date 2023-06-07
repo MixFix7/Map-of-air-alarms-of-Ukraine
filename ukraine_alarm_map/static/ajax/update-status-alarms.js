@@ -1,25 +1,34 @@
-var xhr = new XMLHttpRequest();
+var template = document.getElementById('alarms').innerHTML;
+var element = document
 
-xhr.open('GET', '', true);
+function get_alarms() {
 
-xhr.onload = function() {
-    if (xhr.status >= 200 && xhr.status <= 400) {
-        // Success server answer processing
-        var responce = JSON.parse(xhr.responseText);     
-        console.log(responce.data);
-    } else {
-        console.error(xhr.statusText)
-    }
-};
+    var xhr = new XMLHttpRequest();
 
-xhr.onerror = function() {
-    console.error("Error response");
-};
+    xhr.open('GET', 'get_alarms/', true);
 
-setTimeout(function() {
+    xhr.onload = function() {
+        if (xhr.status >= 200 && xhr.status <= 400) {
+            // Success server answer processing
+            var responce = JSON.parse(xhr.responseText);     
+            console.log(responce.all_alarms);
+        } else {
+            console.error(xhr.statusText)
+        }
+    };
+
+    xhr.onerror = function() {
+        console.error("Error response");
+    };
+
     xhr.send();
-}, 15000); 
 
+};
+
+
+get_alarms();
+
+setInterval(get_alarms(), 15000);
 
 
 
