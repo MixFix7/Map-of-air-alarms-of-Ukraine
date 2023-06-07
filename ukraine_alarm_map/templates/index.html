@@ -18,7 +18,7 @@
 </header>
     
 <!--Скріпти ебані-->
-    <script defer src="{% static 'ajax/update-status-alarms.js' %}"></script>
+    <script src="{% static 'ajax/update-status-alarms.js' %}"></script>
 <!--SVG паганий-->
 <svg viewBox = "0 0 600 400" id="my-element">
 	<defs>
@@ -134,7 +134,7 @@
 {% for city, i in all_alarms.items %}
 {% if city == "Запорізька" and i == "🟢" %}
     <style> #UA-23 { fill: green; } </style>
-{% elif city == "Запорізька" and i == "🔴" %}
+{% elif city == "Запорізька" and i == "🟢" %}
     <style> #UA-23 { fill: red; } </style>
 {% endif %}
 {% if city == "Донецька" and i == "🟢" %}

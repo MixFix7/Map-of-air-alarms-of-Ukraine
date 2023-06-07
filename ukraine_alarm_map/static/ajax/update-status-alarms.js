@@ -21,15 +21,24 @@ function get_alarms() {
         if (xhr.status >= 200 && xhr.status <= 400) {
             // Success server answer processing
             var data = JSON.parse(xhr.responseText);     
-            console.log(data.all_alarms)
-            return data.all_alarms
-            
-            
+
             // var alarms = data.all_alarms;
 
             // var renderedTemplate = renderTemplate(template, alarms);
-
+            
             // updateContent(element, renderedTemplate);
+
+            var all_alarms = data.all_alarms;
+            
+            console.log(all_alarms);
+              
+            for (var city in all_alarms) {
+                var i = all_alarms[city];
+                if (city === "Запорізька" && i === '🟢') {
+                    document.getElementById('UA-23').style.fill = "green";
+                } else if (city === "Запорізька" && i === '🔴') {
+                    document.getElementById('UA-23').style.fill = "red";
+                }};
 
         } else {
             console.error(xhr.statusText)
@@ -48,23 +57,7 @@ get_alarms();
 
 setInterval(get_alarms, 15000);
 
-var alarm = get_alarms();
 
-var g = document.getElementById('g');
 
-var pathElements = g.getElementsByTagName('path')
-
-Array.from(pathElements).forEach(function(path) {
-    var id = path.getAttribute('id');
-    var title = path.getAttribute('title');
-
-    if (alarm["Запорізька"] === '🟢') {
-        path.style.fill = 'red'
-      } else if (alarm.Запорізька === '🔴') {
-        path.style.fill = 'green'
-
-    }
-
-})
 
 
