@@ -2,6 +2,8 @@
 
 ![Map of Air Alarms of Ukraine](map_Ukraine_img.png)
 
+![Map](https://raw.githubusercontent.com/MixFix7/Map-of-air-alarms-of-Ukraine/master/map_Ukraine_img.png)
+
 This repository contains a Django-based web application that displays a map of Ukraine with marked regions where air alarms are currently active. The purpose of this project is to provide real-time information about air pollution levels in different areas of Ukraine.
 
 ## Features
