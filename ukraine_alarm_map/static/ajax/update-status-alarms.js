@@ -81,7 +81,7 @@ function get_alarms() {
                 };
                 if (city === "Херсонська" && i === '🟢') {
                     document.getElementById('UA-65').style.fill = "green";
-                } else if (city === "Херсоньска" && i === '🔴') {
+                } else if (city === "Херсонська" && i === '🔴') {
                     document.getElementById('UA-65').style.fill = "red";
                 };
                 if (city === "Кіровоградська" && i === '🟢') {
@@ -151,7 +151,7 @@ function get_alarms() {
                 };
                 if (city === "Полтавська" && i === '🟢') {
                     document.getElementById('UA-53').style.fill = "green";
-                } else if (city === "Полтавьска" && i === '🔴') {
+                } else if (city === "Полтавська" && i === '🔴') {
                     document.getElementById('UA-53').style.fill = "red";
                 };
                 if (city === "Черкаська" && i === '🟢') {

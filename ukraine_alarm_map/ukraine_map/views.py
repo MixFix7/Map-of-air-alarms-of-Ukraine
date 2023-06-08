@@ -18,6 +18,7 @@ class Map(TemplateView):
 class Alarms(View):
     def get(self, request):
         all_alarms = get_alarms()
+        print(all_alarms)
         return JsonResponse({'all_alarms': all_alarms})
 
 
