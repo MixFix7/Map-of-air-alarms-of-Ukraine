@@ -60,7 +60,7 @@ python manage.py migrate
 python manage.py runserver
 ```
 
-8. You need a use air alert ukraine api, to get information of alarms in Ukraine status
+8. You need a use air alert ukraine api, to get information of alarms in Ukraine status:
 
 9. Access the web application:
 
