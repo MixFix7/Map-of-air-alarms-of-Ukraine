@@ -69,9 +69,9 @@ function get_alarms() {
                 } else if (city === "Закарпатська" && i === '🔴') {
                     document.getElementById('UA-21').style.fill = "red";
                 };
-                if (city === "Луцька" && i === '🟢') {
+                if (city === "Волинська" && i === '🟢') {
                     document.getElementById('UA-07').style.fill = "green";
-                } else if (city === "Луцька" && i === '🔴') {
+                } else if (city === "Волинська" && i === '🔴') {
                     document.getElementById('UA-07').style.fill = "red";
                 };
                 if (city === "Хмельницька" && i === '🟢') {
