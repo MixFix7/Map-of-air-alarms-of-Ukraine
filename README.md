@@ -62,8 +62,6 @@ python manage.py runserver
 
 8. You need a use air alert ukraine api, to get information of alarms in Ukraine status:
 
-9. Access the web application:
-
 Open your web browser and go to `http://localhost:8000` to view the map of air alarms of Ukraine.
 
 
