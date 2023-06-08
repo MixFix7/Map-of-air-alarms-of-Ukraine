@@ -1,6 +1,6 @@
 # Map-of-air-alarms-of-Ukraine
 
-![Map of Air Alarms of Ukraine](map_Ukraine_img.png)
+![Map of air alarms of Ukraine](https://raw.githubusercontent.com/MixFix7/Map-of-air-alarms-of-Ukraine/master/map_Ukraine_img.png)
 
 This repository contains a Django-based web application that displays a map of Ukraine with marked regions where air alarms are currently active. The purpose of this project is to provide real-time information about air pollution levels in different areas of Ukraine.
 
@@ -60,9 +60,7 @@ python manage.py migrate
 python manage.py runserver
 ```
 
-8. You need a use air alert ukraine api, to get information of alarms in Ukraine status
-
-9. Access the web application:
+8. You need a use air alert ukraine api, to get information of alarms in Ukraine status:
 
 Open your web browser and go to `http://localhost:8000` to view the map of air alarms of Ukraine.
 
