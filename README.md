@@ -36,9 +36,11 @@ python -m venv env
 
 ```bash
 # For Windows
+
 env\Scripts\activate
 
 # For macOS/Linux
+
 source env/bin/activate
 ```
 
