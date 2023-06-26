@@ -1,16 +1,3 @@
-// var template = document.getElementById('alarms');
-
-// var element = document.getElementById('div-alarms');
-
-// function renderTemplate(template, data) {
-//     var renderedTemplate = Mustache.render(template, data);
-//     return renderedTemplate;
-// };
-
-// function updateContent(element, content) {
-//     element.innerHTML = content;
-// };
-
 function get_alarms() {
 
     var xhr = new XMLHttpRequest();
@@ -20,13 +7,7 @@ function get_alarms() {
     xhr.onload = function() {
         if (xhr.status >= 200 && xhr.status <= 400) {
             // Success server answer processing
-            var data = JSON.parse(xhr.responseText);     
-
-            // var alarms = data.all_alarms;
-
-            // var renderedTemplate = renderTemplate(template, alarms);
-            
-            // updateContent(element, renderedTemplate);
+            var data = JSON.parse(xhr.responseText);
 
             var all_alarms = data.all_alarms;
             

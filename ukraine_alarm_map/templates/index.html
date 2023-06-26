@@ -14,12 +14,10 @@
 <header>
     <h1 class="label">Карта тривог України <button class="refresh" id="refresh" onclick="refresh_page()"><img src="{% static 'images/refresh.png' %}" alt="refresh"></button> <span class="seconds"> До оновлення карти <span id="countdown" class="seconds">15</span></span></h1>
     <div id="timer"></div>
-    </div>
 </header>
-    
-<!--Скріпти ебані-->
+
     <script src="{% static 'ajax/update-status-alarms.js' %}"></script>
-<!--SVG паганий-->
+
 <svg viewBox = "0 0 600 400" id="my-element">
 	<defs>
 		<style type="text/css">
@@ -129,140 +127,6 @@
         #UA-09 { fill: red}
 </style>
 
-<!--Нахуй мені ваш javascript, якщо в мене є django template language-->
-
-{% for city, i in all_alarms.items %}
-{% if city == "Запорізька" and i == "🟢" %}
-    <style> #UA-23 { fill: green; } </style>
-{% elif city == "Запорізька" and i == "🟢" %}
-    <style> #UA-23 { fill: red; } </style>
-{% endif %}
-{% if city == "Донецька" and i == "🟢" %}
-    <style> #UA-14 { fill: green; } </style>
-{% elif city == "Донецька" and i == "🔴" %}
-    <style> #UA-14 { fill: red; } </style>
-{% endif %}
-{% if city == "Харківська" and i == "🟢" %}
-    <style> #UA-63 { fill: green; } </style>
-{% elif city == "Харківська" and i == "🔴" %}
-    <style> #UA-63 { fill: red; } </style>
-{% endif %}
-{% if city == "Тернопільська" and i == "🟢" %}
-    <style> #UA-61 { fill: green; } </style>
-{% elif city == "Тернопільська" and i == "🔴" %}
-    <style> #UA-61 { fill: red; } </style>
-{% endif %}
-{% if city == "Рівненська" and i == "🟢" %}
-    <style> #UA-56 { fill: green; } </style>
-{% elif city == "Рівненська" and i == "🔴" %}
-    <style> #UA-56 { fill: red; } </style>
-{% endif %}
-{% if city == "Львівська" and i == "🟢" %}
-    <style> #UA-46 { fill: green; } </style>
-{% elif city == "Львівська" and i == "🔴" %}
-    <style> #UA-46 { fill: red; } </style>
-{% endif %}
-{% if city == "Закарпатська" and i == "🟢" %}
-    <style> #UA-21 { fill: green; } </style>
-{% elif city == "Закарпатська" and i == "🔴" %}
-    <style> #UA-21 { fill: red; } </style>
-{% endif %}
-{% if city == "Луцька" and i == "🟢" %}
-    <style> #UA-07 { fill: green; } </style>
-{% elif city == "Луцька" and i == "🔴" %}
-    <style> #UA-07 { fill: red; } </style>
-{% endif %}
-{% if city == "Хмельницька" and i == "🟢" %}
-    <style> #UA-68 { fill: green; } </style>
-{% elif city == "Хмельницька" and i == "🔴" %}
-    <style> #UA-68 { fill: red; } </style>
-{% endif %}
-{% if city == "Херсонська" and i == "🟢" %}
-    <style> #UA-65 { fill: green; } </style>
-{% elif city == "Херсонська" and i == "🔴" %}
-    <style> #UA-65 { fill: red; } </style>
-{% endif %}
-{% if city == "Кіровоградська" and i == "🟢" %}
-    <style> #UA-35 { fill: green; } </style>
-{% elif city == "Кіровоградська" and i == "🔴" %}
-    <style> #UA-35 { fill: red; } </style>
-{% endif %}
-{% if city == "Київська" and i == "🟢" %}
-    <style> #UA-32 { fill: green; } </style>
-{% elif city == "Київська" and i == "🔴" %}
-    <style> #UA-32 { fill: red; } </style>
-{% endif %}
-{% if city == "м.Київ" and i == "🟢" %}
-    <style> #UA-30 { fill: green; } </style>
-{% elif city == "м.Київ" and i == "🔴" %}
-    <style> #UA-30 { fill: red; } </style>
-{% endif %}
-{% if city == "Миколаївська" and i == "🟢" %}
-    <style> #UA-48 { fill: green; } </style>
-{% elif city == "Миколаївська" and i == "🔴" %}
-    <style> #UA-48 { fill: red; } </style>
-{% endif %}
-{% if city == "Одеська" and i == "🟢" %}
-    <style> #UA-51 { fill: green; } </style>
-{% elif city == "Одеська" and i == "🔴" %}
-    <style> #UA-51 { fill: red; } </style>
-{% endif %}
-{% if city == "Дніпропетровська" and i == "🟢" %}
-    <style> #UA-12 { fill: green; } </style>
-{% elif city == "Дніпропетровська" and i == "🔴" %}
-    <style> #UA-12 { fill: red; } </style>
-{% endif %}
-{% if city == "Сумська" and i == "🟢" %}
-    <style> #UA-59 { fill: green; } </style>
-{% elif city == "Сумська" and i == "🔴" %}
-    <style> #UA-59 { fill: red; } </style>
-{% endif %}
-{% if city == "Чернігівська" and i == "🟢" %}
-    <style> #UA-74 { fill: green; } </style>
-{% elif city == "Чернігівська" and i == "🔴" %}
-    <style> #UA-74 { fill: red; } </style>
-{% endif %}
-{% if city == "Чернівецька" and i == "🟢" %}
-    <style> #UA-77 { fill: green; } </style>
-{% elif city == "Чернівецька" and i == "🔴" %}
-    <style> #UA-77 { fill: red; } </style>
-{% endif %}
-{% if city == "Кіровоградська" and i == "🟢" %}
-    <style> #UA-35 { fill: green; } </style>
-{% elif city == "Кіровоградська" and i == "🔴" %}
-    <style> #UA-35 { fill: red; } </style>
-{% endif %}
-{% if city == "Житомирська" and i == "🟢" %}
-    <style> #UA-18 { fill: green; } </style>
-{% elif city == "Житомирська" and i == "🔴" %}
-    <style> #UA-18 { fill: red; } </style>
-{% endif %}
-{% if city == "Черкаська" and i == "🟢" %}
-    <style> #UA-71 { fill: green; } </style>
-{% elif city == "Черкаська" and i == "🔴" %}
-    <style> #UA-71 { fill: red; } </style>
-{% endif %}
-{% if city == "Полтавська" and i == "🟢" %}
-    <style> #UA-53 { fill: green; } </style>
-{% elif city == "Полтавська" and i == "🔴" %}
-    <style> #UA-53 { fill: red; } </style>
-{% endif %}
-{% if city == "Черкаська" and i == "🟢" %}
-    <style> #UA-71 { fill: green; } </style>
-{% elif city == "Черкаська" and i == "🔴" %}
-    <style> #UA-71 { fill: red; } </style>
-{% endif %}
-{% if city == "Івано-Франківська" and i == "🟢" %}
-    <style> #UA-26 { fill: green; } </style>
-{% elif city == "Івано-Франківська" and i == "🔴" %}
-    <style> #UA-26 { fill: red; } </style>
-{% endif %}
-{% if city == "Вінницька" and i == "🟢" %}
-    <style> #UA-05 { fill: green; } </style>
-{% elif city == "Вінницька" and i == "🔴" %}
-    <style> #UA-05 { fill: red; } </style>
-{% endif %}
-{% endfor %}
 
 
 
